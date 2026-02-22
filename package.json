@@ -1,0 +1,18 @@
+{
+  "build": {
+    "productName": "TOSanger",
+    "win": {
+      "iconUrl": "https://raw.githubusercontent.com/electron/electron-api-demos/master/assets/app-icon/win/app.ico"
+    }
+  },
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "pack": "build",
+    "dist": "build"
+  },
+  "dependencies": {
+    "electron-packager": "^7.0.3",
+    "electron-prebuilt": "^1.2.1",
+    "electron-winstaller": "^2.3.1"
+  }
+}

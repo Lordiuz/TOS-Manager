@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400&subset=cyrillic,latin);
+
+/* BASE FUNCTIONS AND VARS */
+@import "base_functional";
+
+/* FONT ICONS */
+@import "icons";
+
+/* RESET CSS BROWSER STYLES */
+@import "reset";
+
+/* BASE PAGE STYLES */
+@import "base";
+
+/* COMMON ELEM STYLES */
+@import "common/index";
+
+/* COMPONENT ELEM STYLES */
+@import "components/index";
+
+/* MEDIA QUERIES */
+@import "media";
+
+/* KEYFRAMES ANIMATIONS */
+@import "keyframes";
+
+/* KEYFRAMES ANIMATIONS */
+@import "project/index";

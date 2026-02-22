@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TOS Manager Notification</title>
+    <link href="./css/screen.css" rel="stylesheet">
+</head>
+<body>
+<div id="window_header">
+    <h1 id="window_title">TOS Manager Notification</h1>
+    <nav id="window_nav">
+        <div class="icon window_nav_button window_close" onclick="closeWindow()" title="Close"></div>
+    </nav>
+</div>
+<main class="flex_grow" onclick="showMain()">
+    <div class="notification_text"></div>
+</main>
+</body>
+<script src="./js/base.js" defer></script>
+<script src="./js/notification.js" defer></script>
+</html>

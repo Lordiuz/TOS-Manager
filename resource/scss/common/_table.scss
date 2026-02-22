@@ -1,0 +1,33 @@
+.table {
+	display: table;
+
+	&_row {
+		display: table-row;
+		padding-top: 5px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&_cell {
+			display: table-cell;
+			padding: 3px 0 3px 13px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.table_description {
+    display: flex;
+    justify-content: space-between;
+
+    dt {
+	    color: #969696;
+	}
+	dd {
+	    margin-left: 13px;
+	}
+}

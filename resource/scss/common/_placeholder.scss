@@ -1,0 +1,10 @@
+::placeholder {
+  color: $calc_grey_color;
+}
+
+:focus {
+  &::placeholder {
+    color: transparent;
+    text-shadow: none;
+  }
+}

@@ -1,0 +1,84 @@
+div.ui_container {
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: flex-start;
+  margin-top: 0.35em;
+  position: relative;
+
+  .ui_input_label, .ui_input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  .ui_input {
+    font-size: 1em;
+    height: calc(1em + 12px);
+  }
+
+  .ui_input:focus {
+    outline: 0;
+  }
+
+  .ui_input_label {
+    //text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1em;
+    color: $calc_grey_color;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .ui_input + .ui_input_label:before {
+    content: none;
+  }
+  /**
+  * Translate down and scale the label up to cover the placeholder,
+  * when following an input (with placeholder-shown support).
+  * Also make sure the label is only on one row, at max 2/3rds of the
+  * field—to make sure it scales properly and doesn't wrap.
+  */
+  .ui_input:placeholder-shown + .ui_input_label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(11px, 6px) scale(1);
+    position: absolute;
+    padding: 0;
+  }
+  /**
+  * By default, the placeholder should be transparent. Also, it should
+  * inherit the transition.
+  */
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  /**
+  * Show the placeholder when the input is focused.
+  */
+  .ui_input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  /**
+  * When the element is focused, remove the label transform.
+  * Also, do this when the placeholder is _not_ shown, i.e. when
+  * there's something in the input at all.
+  */
+  .ui_input:not(:placeholder-shown) + .ui_input_label,
+  .ui_input:focus + .ui_input_label {
+    transform: translate(5px, -0.5em) scale(1);
+    background-color: #fff;
+    color: #808080;
+    font-size: 0.7em;
+    cursor: pointer;
+    padding: 0 5px;
+    &.incorrect {
+      color: #E40000;
+    }
+    &.correct {
+      color: #008000;
+    }
+  }
+}

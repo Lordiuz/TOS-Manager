@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TOS Manager</title>
+    <link href="./css/screen.css" rel="stylesheet">
+</head>
+<body>
+<div id="window_header">
+    <h1 id="window_title">TOS Manager<span class="window_beta">β</span></h1>
+    <nav id="window_nav">
+        <div class="icon window_nav_button window_minimize" onclick="minimizeWindow()" title="Minimize"></div>
+        <div class="icon window_nav_button window_close" onclick="closeWindow()" title="Close"></div>
+    </nav>
+</div>
+<main class="flex_table flex_grow">
+    <div class="flex_row">
+        <button class="ui_button flex_cell_item" id="notifBtn">Notification</button>
+        <button class="ui_button flex_cell_item" id="checkBtn">Check Updates</button>
+        <button class="ui_button flex_cell_item" id="settingsBtn">Settings</button>
+    </div>
+    <div class="flex_row">
+        <button class="ui_button flex_cell_item hidden" id="installBtn"
+                title="Install all addons, that not installed yet">Install All
+        </button>
+        <button class="ui_button flex_cell_item hidden" id="updateBtn" title="Update all addons, available to update">
+            Update All
+        </button>
+        <button class="ui_button flex_cell_item hidden" id="removeBtn" title="Remove all installed addons">Remove All
+        </button>
+    </div>
+    <div class="flex_row">
+        <progress id="updateProgress" value="0" max="1"></progress>
+    </div>
+    <div id="addonList"></div>
+    <div class="flex_grow"></div>
+</main>
+</body>
+<script src="./js/socket.io.js" defer></script>
+<script src="./js/base.js" defer></script>
+<script src="./js/index.js" defer></script>
+</html>

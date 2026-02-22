@@ -1,0 +1,187 @@
+.addon_installed, .addon_version {
+  text-align: center;
+  min-width: 100px;
+}
+
+.addon_version_new {
+  font-weight: bold;
+}
+
+.addon_details {
+  margin-right: 3px;
+  &:before {
+    content: "\e409";
+    cursor: pointer;
+  }
+  &.open:before {
+    content: "\e5cf";
+  }
+}
+
+.flex_row_descr {
+  margin-top: 0;
+  color: $description_color;
+  font-size: 12px;
+}
+
+.flex_row_note {
+  font-size: 14px;
+}
+
+.addon_list_details {
+  margin-top: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.addon_install_btn, .addon_update_btn, .addon_remove_btn {
+  cursor: pointer;
+  font: 14px tahoma, verdana, arial, "Lucida Sans", sans-serif;
+  align-items: center;
+  display: flex;
+  &:before {
+    margin-right: 3px;
+  }
+}
+
+.addon_update_btn, .addon_remove_btn {
+  display: none;
+}
+
+.addon_install_btn:before {
+  content: "\e9c7";
+  color: #008800;
+}
+
+.addon_update_btn:before {
+  content: "\e984";
+  color: #0074D9;
+}
+
+.addon_remove_btn:before {
+  content: "\e9ad";
+  color: #880000;
+}
+
+.installed .addon_install_btn {
+  display: none;
+}
+
+.installed .addon_remove_btn {
+  display: flex;
+}
+
+.outofdate .addon_update_btn {
+  display: flex;
+}
+
+.addon_btn {
+  min-width: 80px;
+}
+
+#addonList > .flex_column {
+  padding: 5px 0;
+  margin-top: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+#updateProgress {
+  margin-bottom: 20px;
+}
+
+.notification_header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.notification_text {
+  font-size: 15px;
+}
+
+html {
+  overflow: hidden;
+  max-height: 100%;
+  background: #fff;
+}
+
+body {
+  max-height: 100%;
+}
+
+main {
+  padding: 10px;
+  box-sizing: border-box;
+  max-height: 100%;
+  .flex_row {
+    flex-shrink: 0;
+  }
+}
+
+#window_nav {
+  display: flex;
+}
+
+.window_nav_button {
+  padding: 3px 10px 2px;
+  font-size: 13px;
+  cursor: pointer;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.window_minimize:before {
+  content: "\e900";
+}
+
+#window_maximize:before {
+  content: "\e902";
+}
+
+.window_close:before {
+  content: "\e901";
+  display: block;
+  transform: rotateZ(45deg);
+}
+
+.window_beta {
+  font-size: 10px;
+  vertical-align: top;
+  margin-left: 5px;
+  color: #009806;
+}
+
+.bb_chat {
+  background-color: #8CA9C3;
+  color: #fff;
+  padding: 0 3px;
+}
+
+#window_title {
+  font: 15px tahoma, verdana, arial, "Lucida Sans", sans-serif;
+  flex-grow: 1;
+  padding: 3px 0;
+}
+
+#window_header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+#addonList {
+  overflow-y: auto;
+  flex-shrink: 1;
+}

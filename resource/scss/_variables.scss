@@ -1,0 +1,54 @@
+$font_bold: Tahoma, Verdana, Arial, 'Lucida Sans', sans-serif;
+$font_regular: 'Open Sans', sans-serif;
+
+$maxwidth: 960px;
+
+$large: $maxwidth;
+$small: 768px;
+
+$default_border_radius: 2px;
+
+$default_border: 1px solid #E6E6E6;
+$semigrey_border: 1px solid #D9D9D9;
+
+$description_color: #969696;
+
+$main_white_color: #fff;
+
+$main_description_color: darken($main_white_color, 30%); // #b3b3b3
+$main_grey_color: darken($main_white_color, 50%); // #808080
+$main_semidark_color: darken($main_grey_color, 17%); // #545454
+$main_dark_color: darken($main_semidark_color, 13%); // #333
+
+$main_background: #fff;
+$default_grey_backgorund: darken($main_background, 5%); // #F2F2F2
+$default_semigrey_backgorund: darken($default_grey_backgorund, 5%); // #e6e6e6
+$default_semigrey_backgorund_hover: darken($default_semigrey_backgorund, 5%); // #d9d9d9
+$default_semigrey_color: #D9D9D9;
+
+$main_blue_color: #edf1f5;
+$default_blue_backgorund: $main_blue_color;
+$default_blue_border_color: darken($main_blue_color, 5%);
+
+/* BUTTONS */
+$button_top_background: #88A4C3;
+$button_bottom_background: darken($button_top_background, 5%);
+$button_bottom_background_hover: darken($button_bottom_background, 5%);
+$button_action_top_background: darken($button_top_background, 10%);
+$button_action_bottom_background: darken($button_action_top_background, 5%);
+$button_action_bottom_background_hover: darken($button_action_bottom_background, 5%);
+
+$default_blue_hover_color: lighten(#557DAA, 45%);
+
+/* CALC */
+$calc_grey_color: darken($main_white_color, 30%);
+$calc_text_shadow: 1px 1px 1px #222;
+$calc_submit_top: #3E4851;
+$calc_main_color: #b6c0cd;
+$calc_header_color: lighten($calc_main_color, 10%);
+
+/* SIDER */
+$sider_bacground: #EDEDED;
+$sider_border: 1px solid darken($sider_bacground, 5%);
+
+$default_box_shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);

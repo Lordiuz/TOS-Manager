@@ -1,0 +1,106 @@
+.ui_input {
+  color: #555;
+  background-image: none;
+  background-color: #FCFCFC;
+  border-radius: $default_border_radius;
+  font: 13px $font_bold;
+  border: $default_border;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  outline: none;
+  &[disabled] {
+    background-color: $default_grey_backgorund;
+    cursor: not-allowed;
+  }
+  &:focus {
+    & + .register-need-body {
+      display: block;
+    }
+    & + .ui_input_tooltip {
+      display: block;
+    }
+  }
+  &_validation {
+    transition: border-color ease-in-out .2s, background-color ease-in-out .2s, color ease-in-out .2s;
+    &::placeholder {
+      color: $calc_grey_color;
+    }
+    &:focus {
+      &::placeholder {
+        color: transparent;
+      }
+    }
+    & + label:before {
+      position: relative;
+      top: 7px;
+      color: $calc_grey_color;
+      font-size: 22px;
+    }
+    & + label {
+      &[for="curency"]:before {
+        content: "\20BD";
+        left: -20px;
+      }
+      &[for="gold"]:before {
+        content: "\00A2";
+        left: -20px;
+      }
+      &[for="email"]:before {
+        content: "\2709";
+        left: -25px;
+      }
+      &[for="contact"]:before {
+        content: "\2706";
+        left: -22px;
+      }
+      &[for="order"]:before {
+        content: "\2116";
+        left: -27px;
+      }
+      &[for="name"]:before {
+        content: "\0539";
+        left: -27px;
+      }
+    }
+    &:invalid {
+      border: 1px solid #E5CCCC;
+      color: #763C3C;
+      background-color: #F6EEEE;
+      & + label:before {
+        content: "\00D7";
+        color: #763C3C;
+        left: -21px;
+      }
+    }
+    &:valid {
+      color: #346538;
+      border: 1px solid #CDE5CF;
+      background-color: #EEF6EF;
+      & + label:before {
+        content: "\2714";
+        color: #346538;
+        left: -21px;
+      }
+    }
+  }
+}
+
+.ui_input_tooltip {
+  overflow: visible;
+  width: 0;
+  float: right;
+  display: none;
+}
+
+.ui_input_tooltip_text {
+  max-width: 300px;
+  text-align: center;
+  margin-left: 10px;
+  padding: 5px;
+  font: 13px $font_bold;
+  color: $main_semidark_color;
+  border: $default_border;
+  border-radius: $default_border_radius;
+  background-color: $main_background;
+  position: absolute;
+}

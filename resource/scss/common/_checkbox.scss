@@ -1,0 +1,55 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  color: #555;
+}
+
+input[type="checkbox"]:disabled + label {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+input[type="checkbox"] + label:before {
+  display: inline-block;
+  content: "\e835";
+  color: $main_grey_color;
+  margin: 0 3px;
+  @include icon();
+}
+
+input[type="checkbox"] + label:hover:before {
+  content: "\e834";
+  color: $main_grey_color;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\e834";
+  color: $main_dark_color;
+}
+
+input[type="checkbox"]:checked + label:hover:before {
+  color: $main_dark_color;
+}
+
+input[type="checkbox"].toggler + label:before {
+  margin: 0;
+  padding: 0;
+  content: "\f204";
+  font-size: 20px;
+  color: #C8400C;
+}
+
+input[type="checkbox"].toggler:checked + label:before {
+  content: "\f205";
+  color: #6FBD1A;
+}
+
+.hidden_checkbox {
+  min-width: 22px;
+  min-height: 15px;
+}

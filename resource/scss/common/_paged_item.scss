@@ -1,0 +1,12 @@
+.paged_item {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.2s;
+  max-height: 0;
+
+  &.showing {
+    max-height: 9999px;
+    transition-timing-function: cubic-bezier(0.5, 0, 1, 0);
+    transition-delay: 0s;
+  }
+}

@@ -1,0 +1,151 @@
+html {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  font-family: $font_regular;
+  cursor: default;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  flex: auto;
+  max-width: $maxwidth + 20;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+#modelHead {
+  min-width: 100%;
+}
+
+#modelBody {
+  min-width: 100%;
+}
+
+#modelFooter {
+  min-width: 100%;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.container-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: auto;
+  flex-grow: 1;
+  max-width: $maxwidth;
+  margin: 0 auto 30px;
+  width: 100%;
+}
+
+.container-min {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 0;
+  max-width: $maxwidth + 20;
+  margin: 10px auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.ui_form {
+  padding: 5px;
+  border: $default_border;
+  background-color: $default_grey_backgorund;
+  border-radius: $default_border_radius;
+  text-align: center;
+}
+
+.absolute {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: visible;
+}
+
+#darkBack {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  &.show {
+    height: auto;
+  }
+}
+
+.outer {
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.flex_grow {
+  flex-grow: 1;
+}
+
+.popup_button {
+  cursor: pointer;
+}
+
+.selectable {
+  user-select: text;
+}
+
+.invalid {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.note {
+  font-size: 14px;
+  color: $description_color;
+}
+
+.modal {
+  display: flex;
+  padding: 30px 0;
+}
+
+.modal_body {
+  margin: 0 auto;
+  padding: 20px 30px;
+  border: 1px solid #E6E6E6;
+  border-radius: 2px;
+  max-width: 400px;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.inline_error {
+  padding: 5px 10px;
+  background: #FFE5E5;
+}

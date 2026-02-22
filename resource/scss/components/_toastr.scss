@@ -1,0 +1,54 @@
+#messengerContainer {
+    font: 12px Verdana,sans-serif;
+    bottom: 20px;
+    position: fixed;
+    left: 20px;
+    width: 300px;
+    z-index: 1;
+}
+
+.messenger_message {
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0, 1, 0, 1) -0.2s;
+  max-height: 0;
+
+  &.showing {
+    max-height: 9999px;
+    transition-timing-function: cubic-bezier(0.5, 0, 1, 0);
+    transition-delay: 0s;
+  }
+}
+
+.messenger_message_body {
+  cursor: pointer;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px #D9D9D9 inset, 1px 1px 1px 0 #D9D9D9;
+  margin-top: 5px;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
+
+.messenger_message_title {
+  &.default {
+    color: green;
+  }
+  &.error {
+    color: red;
+  }
+}
+
+.messenger_message_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font: 12px Tahoma, Verdana, Arial, "Lucida Sans", sans-serif;
+  color: #969696;
+}
+
+.messenger_message_text {
+  font: 13px Verdana,sans-serif;
+  hyphens: auto;
+}

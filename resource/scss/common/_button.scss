@@ -1,0 +1,47 @@
+.ui_button {
+  background-color: #EFF2F5;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  //color: #fff;
+  font: 13px $font_bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: $default_border_radius;
+  padding: 5px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+  outline: none;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 1, 1);
+  &.negative {
+    background-color: #F5EFEF;
+    &:hover {
+      background-color: #EBE0E0;
+    }
+  }
+  &.positive {
+    background-color: #EFF5EF;
+    &:hover {
+      background-color: #E0EBE0;
+    }
+  }
+  &:hover {
+    background-color: #E0E5EB;
+  }
+  &[type="submit"] {
+    background-color: #EEF0F6;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    &:hover {
+      background-color: #DEE2ED;
+    }
+  }
+  &[disabled] {
+    background-color: $default_grey_backgorund;
+    cursor: not-allowed;
+    color: $main_dark_color;
+    &:hover {
+      background-color: $default_grey_backgorund;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TOS Manager Settings</title>
+    <link href="./css/screen.css" rel="stylesheet">
+</head>
+<body>
+<h1 id="window_title">TOS Manager Settings</h1>
+<nav id="window_nav">
+    <div class="icon window_nav_button window_minimize" onclick="minimizeWindow()" title="Minimize"></div>
+    <div class="icon window_nav_button window_close" onclick="closeWindow()" title="Close"></div>
+</nav>
+<main class="flex_table flex_grow">
+    <div id="settingsList" class="flex_table"></div>
+    <div class="flex_grow"></div>
+    <div class="flex_row">
+        <button class="ui_button flex_cell_item" id="updatePath">Update Path</button>
+        <button class="ui_button flex_cell_item" id="saveBtn">Save</button>
+    </div>
+</main>
+</body>
+<script src="./js/base.js" defer></script>
+<script src="./js/settings.js" defer></script>
+</html>
