@@ -6,13 +6,16 @@
     }
   },
   "scripts": {
-    "postinstall": "install-app-deps",
+    "start": "electron app/main/index.js",
+    "test": "node --test app/render/js/addonsRenderPure.test.js",
     "pack": "build",
     "dist": "build"
   },
   "dependencies": {
     "electron-packager": "^7.0.3",
-    "electron-prebuilt": "^1.2.1",
     "electron-winstaller": "^2.3.1"
+  },
+  "devDependencies": {
+    "electron": "^35.0.0"
   }
 }

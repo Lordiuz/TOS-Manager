@@ -20,9 +20,12 @@ var windows = require('./windows')
 var shouldQuit = false
 var argv = sliceArgv(process.argv)
 
-global.__log = function () {
-    console.log(2);
-    console.log(1);
+// Simple logging helper, supports both __log(...) and __log.error(...)
+global.__log = function (...args) {
+    console.log(...args)
+}
+global.__log.error = function (...args) {
+    console.error(...args)
 }
 
 if (process.platform === 'win32') {
@@ -33,10 +36,14 @@ if (process.platform === 'win32') {
 if (!shouldQuit) {
     // Prevent multiple instances of app from running at same time. New instances signal
     // this instance and quit.
-    shouldQuit = app.makeSingleInstance(onAppOpen);
-    //shouldQuit = app.makeSingleInstance(onAppOpen)
-    if (shouldQuit) {
+    var gotLock = app.requestSingleInstanceLock()
+    if (!gotLock) {
+        shouldQuit = true
         app.quit()
+    } else {
+        app.on('second-instance', function (event, commandLine) {
+            onAppOpen(commandLine)
+        })
     }
 }
 

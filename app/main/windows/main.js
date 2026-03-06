@@ -39,7 +39,11 @@ function init () {
         autoHideMenuBar: true,
         frame:           false,
         show:            false,
-        hasShadow:       false
+        hasShadow:       false,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
     })
 
     win.loadURL(config.WINDOW_MAIN)
